@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boxicon CDN -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- main css  -->
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <title>Hospital site</title>
+</head>
+
+<body>
+    <nav class="window-scroll">
+        <div class="container ">
+            <h1> <a href="h3" class="nav__logo"> iCare+</a> </h1>
+            <ul id="nav_items">
+                <li><a href="#"> Home</a></li>
+                <li><a href="#services"> Services</a></li>
+                <li><a href="#specialists"> Specialists</a></li>
+                <li><a href="#testimonials"> Testimonials</a></li>
+                <li><a href="#appoitment" class="btn"> Make Appointment</a></li>
+            </ul>
+            <button id="open__nav-btn"> <i class='bx bx-menu'></i>
+            </button>
+            <button id="close__nav-btn"> <i class='bx bx-x'></i></button>
+        </div>
+
+    </nav>
+    <!--  End Nav  bar -->
+
+    <!-- header section -->
+    <header>
+        <div class="container">
+            <div class="header_content">
+
+                <h1> Complete Health Care Solution For Everyone</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, in. Dolores fuga iusto ad ipsam rerum
+                    quas deleniti eum amet quasi dolorum omnis, impedit officiis fugit quia sapiente saepe ducimus
+                    quidem.
+                </p>
+
+                <a href="#appointment" class="btn"> Make Appointment</a>
+
+            </div>
+            <div class="header__image">
+                <img src="./assets/assets/blood-test.png" alt="header__img">
+                <!-- <img src="data:image/jpeg;base64,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"
+                    alt="headerImg"> -->
+            </div>
+        </div>
+    </header>
+
+
+
+    <!--  Service Section  -->
+
+    <section id="services">
+        <h2>our Services</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, recusandae.</p>
+
+        <div class="container">
+            <article> <i class='bx bx-book'></i>
+                <div>
+                    <h4>Online Booking</h4>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, recusandae?</small>
+                </div>
+            </article>
+
+            <article> <i class='bx bxs-award'></i>
+                <div>
+                    <h4> Qualified Doctor</h4>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, recusandae?</small>
+                </div>
+            </article>
+            <article> <i class='bx bx-book'></i>
+                <div>
+                    <h4>Well Cared</h4>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, recusandae?</small>
+                </div>
+            </article>
+
+            <article> <i class='bx bxs-car'></i>
+                <div>
+                    <h4>Need Emergency</h4>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, recusandae?</small>
+                </div>
+            </article>
+            <article> <i class='bx bx-shield-plus'></i>
+                <div>
+                    <h4>24 Hours Service</h4>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, recusandae?</small>
+                </div>
+            </article>
+
+            <article> <i class='bx bxl-meta'></i>
+                <div>
+                    <h4>Online Booking</h4>
+                    <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, recusandae?</small>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Specialists Section -->
+    <section id="specialists">
+        <h2> Our Top Specialists</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis cupiditate ullam at voluptatum quae beatae
+            rem nulla veritatis quasi ab.</p>
+
+        <div class="container">
+            <article>
+                <div class="specialist__image"> <img src="./assets/assets/specialist1.jpg" alt=""></div>
+                <div class="specialist__details">
+                    <h4> DR. White Musk</h4>
+                    <small> Surgery Specialists</small>
+                </div>
+                <div class="specialist__socials">
+                    <a href="https:/linkedin.com" target="_blank"> <i class='bx bxl-linkedin'></i> </a>
+                    <a href="https:/twitch.com" target="_blank"> <i class='bx bxl-twitch'></i> </a>
+                    <a href="https:/facebook.com" target="_blank"> <i class='bx bxl-facebook'></i> </a>
+                    <a href="https:/instagram.com" target="_blank"> <i class='bx bxl-instagram'></i> </a>
+                </div>
+                <a href="https:api.whatsapp.com/send?phone=+98013213123" class="specialist__whatsapp"> <i
+                        class='bx bxl-whatsapp'> </i></a>
+            </article>
+
+            <article>
+                <div class="specialist__image"> <img src="./assets/assets/specialist4.jpg" alt=""></div>
+                <div class="specialist__details">
+                    <h4> DR. Sweta Aelo </h4>
+                    <small> Dent Specialists</small>
+                </div>
+                <div class="specialist__socials">
+                    <a href="https:/linkedin.com" target="_blank"> <i class='bx bxl-linkedin'></i> </a>
+                    <a href="https:/twitch.com" target="_blank"> <i class='bx bxl-twitch'></i> </a>
+                    <a href="https:/facebook.com" target="_blank"> <i class='bx bxl-facebook'></i> </a>
+                    <a href="https:/instagram.com" target="_blank"> <i class='bx bxl-instagram'></i> </a>
+                </div>
+                <a href="https:api.whatsapp.com/send?phone=+98013213123" class="specialist__whatsapp"> <i
+                        class='bx bxl-whatsapp'> </i></a>
+            </article>
+
+            <article>
+                <div class="specialist__image"> <img src="./assets/assets/specialist2.jpg" alt=""></div>
+                <div class="specialist__details">
+                    <h4> DR. Gita Jha</h4>
+                    <small> Gyno Specialists</small>
+                </div>
+                <div class="specialist__socials">
+                    <a href="https:/linkedin.com" target="_blank"> <i class='bx bxl-linkedin'></i> </a>
+                    <a href="https:/twitch.com" target="_blank"> <i class='bx bxl-twitch'></i> </a>
+                    <a href="https:/facebook.com" target="_blank"> <i class='bx bxl-facebook'></i> </a>
+                    <a href="https:/instagram.com" target="_blank"> <i class='bx bxl-instagram'></i> </a>
+                </div>
+                <a href="https:api.whatsapp.com/send?phone=+98013213123" class="specialist__whatsapp"> <i
+                        class='bx bxl-whatsapp'> </i></a>
+            </article>
+
+            <article>
+                <div class="specialist__image"> <img src="./assets/assets/specialist3.jpg" alt=""></div>
+                <div class="specialist__details">
+                    <h4> DR. Juli Star</h4>
+                    <small> ophthalmology Specialists</small>
+                </div>
+                <div class="specialist__socials">
+                    <a href="https:/linkedin.com" target="_blank"> <i class='bx bxl-linkedin'></i> </a>
+                    <a href="https:/twitch.com" target="_blank"> <i class='bx bxl-twitch'></i> </a>
+                    <a href="https:/facebook.com" target="_blank"> <i class='bx bxl-facebook'></i> </a>
+                    <a href="https:/instagram.com" target="_blank"> <i class='bx bxl-instagram'></i> </a>
+                </div>
+                <a href="https:api.whatsapp.com/send?phone=+98013213123" class="specialist__whatsapp"> <i
+                        class='bx bxl-whatsapp'> </i></a>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- testimonilas Section -->
+
+    <section id="testimonials" class="swiper mySwiper">
+        <h2>What our Patients Say</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla beatae nam laudantium numquam suscipit
+            possimus necessitatibus aperiam quisquam.
+        </p>
+        <div class="swiper-wrapper">
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="swiper-slide">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab suscipit recusandae distinctio sed,
+                    labore id error tempora, dolorem unde perspiciatis amet tempore
+                </p>
+                <div class="patient">
+                    <div class="avatar">
+                        <img src="./assets/assets/avatar1.jpg" alt="patinet 1">
+                    </div>
+                    <div class="patient__details">
+                        <h5>Nana Ama McBrown</h5>
+                        <small>Patient</small>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </section>
+
+    <!-- ################################ Appointment Section ####################### -->
+
+
+    <section id="appointment">
+        <div class="container">
+
+            <div class="info">
+                <h2>Get An Appointment</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <article>
+                    <div class="info_icon">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div>
+                        <h4> Experience Doctors</h4>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officia harum est libero
+                            reprehenderit totam aspernatur saepe corrupti ipsam eum. </small>
+
+                    </div>
+                </article>
+                <article>
+                    <div class="info_icon">
+                        <i class="bx bx-band-aid"></i>
+                    </div>
+                    <div>
+                        <h4> Advanced Technology</h4>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officia harum est libero
+                            reprehenderit totam aspernatur saepe corrupti ipsam eum. </small>
+
+                    </div>
+                </article>
+                <article>
+                    <div class="info_icon">
+                        <i class="bx bx-first-aid"></i>
+                    </div>
+                    <div>
+                        <h4> Emergency Care</h4>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima officia harum est libero
+                            reprehenderit totam aspernatur saepe corrupti ipsam eum. </small>
+                    </div>
+                </article>
+
+            </div>
+            <form>
+                <div class="form_group">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter Your Name" name="Patients" id="name" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="phone">Phone</label>
+                    <input type="number" name="phone" placeholder="Enter Your Phone Number" id="number" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="date"> Date</label>
+                    <input type="date" placeholder="Choose a Date" name="date" id="date" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="department"> Select Department</label>
+                    <select name="Department" id="department">
+                        <option value="Department One"> Department One</option>
+                        <option value=" Department Two"> Department Two</option>
+                        <option value="Department Three"> Department Three</option>
+                        <option value="Department Four"> Department Four</option>
+                        <option value="Department Five"> Department Five</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="doctor"> Select Doctor</label>
+                    <select name="Doctor" id="doctor">
+                        <option value="Doctor One"> Doctor one</option>
+                        <option value="Doctor Two"> Doctor Two</option>
+                        <option value="Doctor Three"> Doctor Three</option>
+                        <option value="Doctor Four"> Doctor Four</option>
+                        <option value="Doctor Five"> Doctor Five</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label for="message"> Additional Message</label>
+                    <textarea name="Added Message" id="message" rows="6" placeholder="Add a Message"></textarea>
+                </div>
+                <input type="submit" value="Submit request" class="btn-primary">
+            </form>
+        </div>
+    </section>
+
+    <!-- ################# Footer ########################### -->
+    <footer>
+        <div class="container">
+            <article>
+                <a href="#" class="footer_logo "> iCare+</a>
+
+
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit.
+                        adipisicing elit. Perspiciatis, distinctio?
+                    </p>
+                </div>
+                <div>
+                    <i class="bx bxs-phone"></i>
+                    <small>+977 9867321423</small>
+
+                </div>
+                <div>
+                    <i class="bx bx-mail-send"></i>
+                    <small>contact@icareplus.com</small>
+
+                </div>
+
+            </article>
+
+            <article>
+                <h3>Support</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#"> cookie Policy</a>
+                <a href="#">Purchasing Policy</a>
+                <a href="#">Terms & Conditons</a>
+            </article>
+
+            <article>
+                <h3>PermaLinks</h3>
+                <a href="#Services">Services</a>
+                <a href="#sepcialsist"> Specialists</a>
+                <a href="#Testimonials">Testimonials</a>
+                <a href="#appointment" class="btn-primary">Get Appointment</a>
+            </article>
+
+            <article>
+                <h3>Contact Us</h3>
+                <p>Press</p>
+                <P>FAQs</P>
+                <div class="footer_socials">
+                    <a href="#"> <i class="bx bxl-linkedin"></i></a>
+                    <a href="#"> <i class="bx bxl-twitch"></i></a>
+                    <a href="#"> <i class="bx bxl-facebook"></i></a>
+                    <a href="#"> <i class="bx bxl-instagram"></i></a>
+
+                </div>
+            </article>
+        </div>
+
+
+        <div class="copyright"> © icare PVT LTD
+            <div> Github source: @bhusalmanish/icare</div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+
+
+</body>
+
+</html>
